@@ -57,6 +57,16 @@
   filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.15));
 }
 
+@media (max-width: 719px) {
+  .masonry {
+    columns: 1;
+  }
+
+  .sticker {
+    display: none;
+  }
+}
+
 .caption {
   position: relative;
   z-index: 1;
