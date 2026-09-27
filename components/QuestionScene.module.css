@@ -1,0 +1,83 @@
+.wrap {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  border-radius: 28px;
+  padding: 48px 40px;
+  text-align: center;
+  max-width: 480px;
+  box-shadow: 0 20px 50px var(--shadow-soft);
+}
+
+.bigHeart {
+  font-size: 3.4rem;
+  margin-bottom: 8px;
+}
+
+.question {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  margin: 0 0 8px;
+  color: var(--plum);
+  line-height: 1.2;
+}
+
+.hint {
+  color: var(--plum);
+  opacity: 0.65;
+  margin: 0 0 28px;
+  font-size: 0.95rem;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+.yes,
+.no {
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 14px 30px;
+  border-radius: 999px;
+}
+
+.yes {
+  background: var(--rose);
+  color: var(--cream);
+  box-shadow: 0 10px 24px var(--shadow-soft);
+}
+
+.no {
+  background: transparent;
+  color: var(--plum);
+  border: 2px solid var(--plum);
+  opacity: 0.75;
+  z-index: 5;
+}
+
+.yes:focus-visible,
+.no:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .buttonRow {
+    flex-direction: column;
+  }
+}

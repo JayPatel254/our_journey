@@ -1,0 +1,64 @@
+:root {
+  --cream: #fff6ef;
+  --blush: #ffd7e4;
+  --blush-deep: #ffb8cf;
+  --rose: #c9184a;
+  --rose-dark: #9c1240;
+  --plum: #3d1f2b;
+  --gold: #e3a857;
+  --shadow-soft: rgba(61, 31, 43, 0.12);
+
+  --font-display: "Fraunces", "Iowan Old Style", serif;
+  --font-body: "Quicksand", "Trebuchet MS", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--cream);
+  color: var(--plum);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+button {
+  font-family: var(--font-body);
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--blush-deep);
+  color: var(--rose-dark);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

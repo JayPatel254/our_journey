@@ -1,0 +1,45 @@
+.layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.item {
+  position: absolute;
+  top: 110%;
+  opacity: 0.5;
+  animation-name: drift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes drift {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-55vh) translateX(12px) rotate(8deg);
+  }
+  90% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translateY(-115vh) translateX(-8px) rotate(-6deg);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item {
+    animation: none;
+    opacity: 0.25;
+    top: 20%;
+  }
+}

@@ -1,0 +1,17 @@
+.stage {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+      circle at 15% 20%,
+      var(--blush) 0%,
+      transparent 45%
+    ),
+    radial-gradient(circle at 85% 80%, var(--blush) 0%, transparent 45%),
+    var(--cream);
+}

@@ -1,0 +1,70 @@
+.wrap {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 64px 24px 80px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  text-align: center;
+  margin: 0 0 6px;
+  color: var(--plum);
+}
+
+.sub {
+  text-align: center;
+  color: var(--plum);
+  opacity: 0.7;
+  margin: 0 0 36px;
+}
+
+.masonry {
+  columns: 2;
+  column-gap: 18px;
+}
+
+@media (min-width: 720px) {
+  .masonry {
+    columns: 3;
+  }
+}
+
+.card {
+  position: relative;
+  break-inside: avoid;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 26px var(--shadow-soft);
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.sticker {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 1.6rem;
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.15));
+}
+
+.caption {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 12px 14px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--plum);
+  background: rgba(255, 255, 255, 0.85);
+}
